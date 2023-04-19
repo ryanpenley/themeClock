@@ -22,9 +22,12 @@ function setTime() {
     const today = new Date();
 
     const hour = today.getHours() % 12
+
+    const twentyFourHours = today.getHours() % 24
+
     const minute = today.getMinutes()
     const second = today.getSeconds()
-    const ampm = hour >= 12 ? 'PM' : 'AM'
+    const ampm = twentyFourHours >= 12 ? 'PM' : 'AM'
 
     const month = today.getMonth()
     const day = today.getDay()
